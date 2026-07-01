@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Beyond by Decathlon</title>
+<style>
+:root{
+  --blue:#0072CE; --dark:#06131f; --card:#0d2133; --card2:#102b42;
+  --yellow:#FFD400; --text:#f4f8ff; --muted:#b9c8d8; --line:rgba(255,255,255,.12);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#03070b;color:var(--text)}
+.app{max-width:430px;margin:0 auto;min-height:100vh;background:linear-gradient(180deg,#071a2b,#07111d);padding-bottom:80px}
+.hero{padding:24px 18px 28px;background:linear-gradient(180deg,rgba(0,114,206,.9),rgba(6,19,31,.85)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80');background-size:cover;background-position:center}
+.logo{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}
+.logo div:first-child{background:white;color:var(--blue);font-weight:900;padding:8px 11px;border-radius:4px}
+.logo div:last-child{border:1px solid rgba(255,255,255,.35);padding:7px 11px;border-radius:999px;font-size:12px}
+h1{font-size:38px;line-height:.95;margin:0 0 12px;font-weight:900}
+.hero p{font-size:17px;font-weight:700;margin:0 0 20px}
+.search{background:white;color:#111;padding:14px;border-radius:16px;font-size:14px}
+section{padding:18px}
+h2{font-size:19px;margin:0 0 13px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card,.route,.product{background:linear-gradient(180deg,var(--card),#091827);border:1px solid var(--line);border-radius:20px;padding:14px}
+.card b{display:block;margin-bottom:5px}
+.card p,.route p,.product p{color:var(--muted);font-size:13px;line-height:1.35;margin:0}
+.icon{font-size:24px;margin-bottom:8px}
+.route{display:flex;gap:12px;margin-bottom:12px;padding:10px}
+.routeImg{width:98px;min-width:98px;height:120px;border-radius:16px;background-size:cover;background-position:center}
+.r1{background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=700&q=80')}
+.r2{background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=80')}
+.route h3,.product h3{margin:2px 0 7px;font-size:16px}
+.tag{display:inline-block;font-size:11px;padding:5px 7px;border-radius:999px;background:rgba(57,217,138,.15);color:#9cffc9;margin:2px}
+.event{background:linear-gradient(135deg,rgba(0,114,206,.96),rgba(4,25,44,.95)),url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80');background-size:cover;border-radius:24px;padding:18px;border:1px solid rgba(255,255,255,.15)}
+.event h2{font-size:25px;margin-bottom:5px}
+.date{display:inline-block;background:var(--yellow);color:#07111d;padding:8px 10px;border-radius:999px;font-weight:900;margin:10px 0}
+ul{margin:10px 0 0;padding:0;list-style:none}
+li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px}
+.cta,.linkBtn{display:block;width:100%;border:0;text-align:center;text-decoration:none;margin-top:12px;background:var(--yellow);color:#06131f;padding:13px 14px;border-radius:15px;font-weight:900}
+.miniGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mini{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:16px;padding:10px;text-align:center}
+.mini strong{display:block;font-size:18px}.mini small{color:var(--muted);font-size:11px}
+.product{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.productIcon{width:66px;height:66px;border-radius:16px;background:#12395a;display:flex;align-items:center;justify-content:center;font-size:30px}
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);max-width:430px;width:100%;display:grid;grid-template-columns:repeat(5,1fr);background:rgba(5,14,23,.96);border-top:1px solid var(--line)}
+.nav div{text-align:center;padding:10px 2px;color:var(--muted);font-size:10px}.nav span{display:block;font-size:18px}.active{color:white!important}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero">
+  <div class="logo"><div>DECATHLON</div><div>ADAPTED</div></div>
+  <h1>BEYOND</h1>
+  <p>Esplora con noi. Beyond.</p>
+  <div class="search">🔎 Cerca percorsi accessibili, eventi e prodotti</div>
+</header>
+
+<section>
+  <h2>Cosa puoi fare</h2>
+  <div class="grid">
+    <div class="card"><div class="icon">🗺️</div><b>Percorsi accessibili</b><p>Filtra sentieri per pendenza, fondo, durata e servizi.</p></div>
+    <div class="card"><div class="icon">🤝</div><b>Community</b><p>Recensioni reali, consigli e foto dagli utenti.</p></div>
+    <div class="card"><div class="icon">🎟️</div><b>Eventi gratuiti</b><p>Outdoor day inclusivi organizzati da Decathlon.</p></div>
+    <div class="card"><div class="icon">🧥</div><b>Prodotti adaptive</b><p>Consigli tecnici in base al percorso scelto.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Percorsi consigliati</h2>
+  <div class="route"><div class="routeImg r1"></div><div><h3>Oasi Zegna — Anello accessibile</h3><span class="tag">carrozzina friendly</span><span class="tag">3,2 km</span><span class="tag">pendenza bassa</span><p>Percorso immerso nella natura, adatto a uscite di gruppo con supporto volontari.</p></div></div>
+  <div class="route"><div class="routeImg r2"></div><div><h3>Parco del Mincio — Green trail</h3><span class="tag">fondo regolare</span><span class="tag">5 km</span><span class="tag">bagni accessibili</span><p>Percorso pianeggiante, perfetto per testare la collezione outdoor adaptive.</p></div></div>
+</section>
+
+<section>
+  <div class="event">
+    <h2>Beyond Outdoor Day</h2>
+    <p>Esperienza outdoor gratuita, accessibile e aperta a tutti.</p>
+    <div class="date">17 Maggio 2027 · 10:00</div>
+    <ul>
+      <li>📍 Oasi Zegna, Piemonte</li>
+      <li>💧 Acqua gratuita durante il percorso</li>
+      <li>🍎 Snack energetici offerti da Decathlon</li>
+      <li>👥 Supporto di volontari lungo il tragitto</li>
+      <li>🧥 Test prodotti Decathlon Adapted</li>
+    </ul>
+    <button class="cta">Iscriviti gratis</button>
+  </div>
+</section>
+
+<section>
+  <h2>Accessibilità del percorso</h2>
+  <div class="miniGrid">
+    <div class="mini"><strong>4%</strong><small>pendenza max</small></div>
+    <div class="mini"><strong>3.2km</strong><small>distanza</small></div>
+    <div class="mini"><strong>90min</strong><small>durata</small></div>
+    <div class="mini"><strong>✓</strong><small>parcheggio</small></div>
+    <div class="mini"><strong>✓</strong><small>bagni</small></div>
+    <div class="mini"><strong>✓</strong><small>volontari</small></div>
+  </div>
+</section>
+
+<section>
+  <h2>Kit consigliato</h2>
+  <div class="product"><div class="productIcon">🧥</div><div><h3>Giacca Outdoor Adaptive</h3><p>Copertura gambe regolabile, design seated-fit e guanto integrato removibile.</p></div></div>
+  <div class="product"><div class="productIcon">👖</div><div><h3>Pantaloni Adaptive</h3><p>Apertura laterale completa, cuciture ridotte e zona seduta soft.</p></div></div>
+  <div class="product"><div class="productIcon">👕</div><div><h3>Maglia Termica Adaptive</h3><p>Tessuto tecnico caldo e traspirante, facile da indossare e adatto all’outdoor.</p></div></div>
+  <a class="linkBtn" href="https://www.decathlon.it/" target="_blank">Scopri i prodotti sul sito Decathlon →</a>
+</section>
+
+<section>
+  <h2>Community Beyond</h2>
+  <div class="card"><b>“Finalmente so prima se un percorso è davvero accessibile.”</b><p>Recensione percorso · Oasi Zegna</p></div>
+</section>
+
+<nav class="nav">
+  <div class="active"><span>🏠</span>Home</div><div><span>🗺️</span>Mappe</div><div><span>🎟️</span>Eventi</div><div><span>👥</span>Community</div><div><span>🛒</span>Shop</div>
+</nav>
+</div>
+</body>
+</html>
